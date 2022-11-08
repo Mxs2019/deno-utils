@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.162.0/testing/asserts.ts";
+import { assertEquals } from "../deps.ts";
 import { generateJSON } from "./generateJSON.ts";
 
 Deno.test("Test JSON Generation", async () => {

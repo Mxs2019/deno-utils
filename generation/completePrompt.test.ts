@@ -1,5 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.162.0/testing/asserts.ts";
-
+import { assertEquals } from "../deps.ts";
 import { completePrompt } from "./completePrompt.ts";
 
 Deno.test("Test Prompt Completion", async () => {

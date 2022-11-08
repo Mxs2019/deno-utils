@@ -21,4 +21,12 @@ YEXT_API_KEY
 
 `getNearbyEntities` returns a list of nearby entities to a give place
 
-`handleStreamUpdateWebhook` Handles a stream update webhook from Yext
+`generateSampleStreamWebhook` generates a sample webhook for the stream webhook endpoint
+
+`parseStreamWebhookDocs` parses the stream webhook docs and returns a list of the docs
+
+`updateEntity` updates a single entity
+
+### Utils
+
+`slugify` takes a string and returns a slugified version
