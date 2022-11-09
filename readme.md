@@ -17,6 +17,8 @@ YEXT_API_KEY
 
 `generateMetaDescription` takes a topic and returns a meta description.
 
+`generateBlogPost` takes a topic and returns a blog post. Optionally pass in a number of paragraphs. Each paragraph has a header that is written in markdown (##).
+
 ### Yext APIs
 
 `getNearbyEntities` returns a list of nearby entities to a give place
