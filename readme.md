@@ -19,7 +19,7 @@ Deno.env.set("YEXT_API_KEY", "XXX-XXX")
 To use this module, you can import it like so:
 
 ```
-import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/v0.0.2/index.ts";
+import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/v0.0.3/index.ts";
 ```
 
 ### Content Generation
@@ -31,6 +31,8 @@ import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs20
 `generateMetaDescription` takes a topic and returns a meta description.
 
 `generateMarkdownBlogPost` takes a topic and returns a blog post. Optionally pass in a number of paragraphs. Each paragraph has a header that is written in markdown (##).
+
+`generateImage` Generate an image from a topic.
 
 `fixJson` takes a string and returns a JSON object. It will automatically fix JSON. If it's struggling it will use OpenAI to fix so this can get a bit slow.
 
