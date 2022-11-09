@@ -7,6 +7,13 @@ OPENAI_API_KEY
 YEXT_API_KEY
 ```
 
+You can set these at runtime with a command like:
+
+```
+Deno.env.set("OPENAI_API_KEY", "XXX-XXX")
+Deno.env.set("YEXT_API_KEY", "XXX-XXX")
+```
+
 ## Usage
 
 ### Content Generation
@@ -17,7 +24,9 @@ YEXT_API_KEY
 
 `generateMetaDescription` takes a topic and returns a meta description.
 
-`generateBlogPost` takes a topic and returns a blog post. Optionally pass in a number of paragraphs. Each paragraph has a header that is written in markdown (##).
+`generateMarkdownBlogPost` takes a topic and returns a blog post. Optionally pass in a number of paragraphs. Each paragraph has a header that is written in markdown (##).
+
+`fixJson` takes a string and returns a JSON object. It will automatically fix JSON. If it's struggling it will use OpenAI to fix so this can get a bit slow.
 
 ### Yext APIs
 

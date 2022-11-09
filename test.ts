@@ -1,5 +1,13 @@
-import { generateSampleStreamWebhook } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/v0.0.0/index.ts";
+import { generateMarkdownBlogPost, updateEntity } from "./index.ts";
 
-Deno.test("Test", () => {
-  console.log(generateSampleStreamWebhook("hey"));
+Deno.test("Test", async () => {
+  const body = await generateMarkdownBlogPost("Gardening in the Winter", {
+    paragraphCount: 5,
+  });
+  console.log(body);
+
+  const entityId = "1086543514234433972";
+
+  const res = await updateEntity(entityId, { body });
+  console.log(res.meta);
 });
