@@ -19,7 +19,7 @@ Deno.env.set("YEXT_API_KEY", "XXX-XXX")
 To use this module, you can import it like so:
 
 ```
-import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/vX.X.X/index.ts";
+import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/v0.0.2/index.ts";
 ```
 
 ### Content Generation
