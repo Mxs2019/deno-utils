@@ -16,6 +16,12 @@ Deno.env.set("YEXT_API_KEY", "XXX-XXX")
 
 ## Usage
 
+To use this module, you can import it like so:
+
+```
+import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/vX.X.X/index.ts";
+```
+
 ### Content Generation
 
 `completePrompt` is a function that takes a prompt and a list of options and returns the best match.
