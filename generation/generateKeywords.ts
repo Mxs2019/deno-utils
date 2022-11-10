@@ -1,4 +1,5 @@
 // Generats a meta description based on the topic of the page.
+import { z } from "../deps.ts";
 import { completePrompt } from "./completePrompt.ts";
 import { fixJson } from "./fixJson.ts";
 
@@ -19,6 +20,8 @@ ${topic}
     }
   );
 
-  const json = await fixJson("{ keywords: [" + res);
+  const json = z
+    .object({ keywords: z.array(z.string()) })
+    .parse(await fixJson("{ keywords: [" + res));
   return json.keywords;
 };
