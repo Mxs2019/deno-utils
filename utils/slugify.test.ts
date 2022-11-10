@@ -8,11 +8,6 @@ Deno.test("Slugify Basic", () => {
   assertEquals(slug, "new-york-city");
 });
 
-Deno.test("Slugify with Slash", () => {
-  const slug = slugify("New York City / Hello World");
-  assertEquals(slug, "new-york-city-hello-world");
-});
-
 Deno.test("Slugify Weird Characters", () => {
   const slug = slugify("New York City & Hello World");
   assertEquals(slug, "new-york-city-hello-world");

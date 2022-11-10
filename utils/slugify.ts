@@ -1,6 +1,9 @@
 export const slugify = (str: string) => {
-    return str
+  return (
+    str
       .toLowerCase()
-      .replace(/[^\w ]+/g, "")
-      .replace(/ +/g, "-");
-  };
+      // don't remove /
+      .replace(/[^\w ]+/g, "") // remove non-word characters
+      .replace(/ +/g, "-")
+  ); // replace spaces with dashes
+};

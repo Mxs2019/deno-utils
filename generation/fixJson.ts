@@ -2,7 +2,6 @@ import jsonrepair from "https://cdn.skypack.dev/jsonrepair";
 import { completePrompt } from "./completePrompt.ts";
 
 export const fixJson = async (potentiallyBadJson: string) => {
-  console.log(potentiallyBadJson);
   try {
     const json = JSON.parse(potentiallyBadJson);
     return json;

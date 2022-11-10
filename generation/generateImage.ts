@@ -25,7 +25,7 @@ export const generateImage = async (
           Authorization: `Bearer ${Deno.env.get("OPENAI_API_KEY")}`,
         },
         body: JSON.stringify({
-          prompt,
+          prompt: `35mm film high def photograph of the topic: ${prompt}`,
           n,
         }),
       }

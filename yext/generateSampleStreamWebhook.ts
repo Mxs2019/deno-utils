@@ -1,17 +1,14 @@
-export const generateSampleStreamWebhook = (
-  entityId: string,
-  uid = 2342524
-) => {
+export const generateSampleStreamWebhook = (entityId: string, data: any) => {
   return {
     docs: [
       {
         $key: {
           locale: "",
-          primary_key: uid.toString(),
+          primary_key: entityId,
         },
         id: entityId,
-        name: "Test Entity",
-        uid,
+        uid: entityId,
+        ...data,
       },
     ],
     meta: {
