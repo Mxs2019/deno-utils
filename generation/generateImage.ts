@@ -1,4 +1,3 @@
-import "https://deno.land/x/dotenv/load.ts";
 import { z } from "../deps.ts";
 
 export type GenerateImageOptions = {
@@ -22,7 +21,7 @@ export const generateImage = async (
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${Deno.env.get("OPENAI_API_KEY")}`,
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
           prompt: `35mm film high def photograph of the topic: ${prompt}`,

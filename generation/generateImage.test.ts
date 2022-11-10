@@ -1,4 +1,6 @@
+import { loadEnvToGlobals } from "../globals/loadEnvToGlobals.ts";
 import { generateImage } from "./generateImage.ts";
+loadEnvToGlobals();
 
 Deno.test("Test Image Generation", async () => {
   const data = await generateImage(

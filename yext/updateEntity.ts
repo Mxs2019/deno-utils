@@ -1,5 +1,3 @@
-import "https://deno.land/x/dotenv/load.ts";
-
 type UpdateEntityOptions = {
   format?: "markdown" | "html";
 };
@@ -13,7 +11,6 @@ export const updateEntity = async (
   content: any,
   { format }: UpdateEntityOptions = defaultOptions
 ) => {
-  const YEXT_API_KEY = Deno.env.get("YEXT_API_KEY");
   const res = await fetch(
     `https://api.yext.com/v2/accounts/me/entities/${entityId}?v=20221001&api_key=${YEXT_API_KEY}&format=${format}`,
     {

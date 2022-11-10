@@ -1,5 +1,7 @@
 import { assertEquals } from "../deps.ts";
+import { loadEnvToGlobals } from "../globals/loadEnvToGlobals.ts";
 import { generateJSON } from "./generateJSON.ts";
+loadEnvToGlobals();
 
 Deno.test("Test JSON Generation", async () => {
   try {

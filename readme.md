@@ -1,25 +1,20 @@
 # MXS Deno Utils
 
-A bunch of handful deno utils. The following two environment variables are required:
+A bunch of handful deno utils. The following two global variables are required:
 
 ```
 OPENAI_API_KEY
 YEXT_API_KEY
 ```
 
-You can set these at runtime with a command like:
-
-```
-Deno.env.set("OPENAI_API_KEY", "XXX-XXX")
-Deno.env.set("YEXT_API_KEY", "XXX-XXX")
-```
+You can set these at runtime with the `setGlobals` function that's exported.
 
 ## Usage
 
 To use this module, you can import it like so:
 
 ```
-import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/v0.0.4/index.ts";
+import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/v0.0.5/index.ts";
 ```
 
 ### Content Generation

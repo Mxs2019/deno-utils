@@ -1,4 +1,4 @@
-export const generateSampleStreamWebhook = (entityId: string, data: any) => {
+export const generateSampleStreamWebhook = (entityId: string, data?: any) => {
   return {
     docs: [
       {

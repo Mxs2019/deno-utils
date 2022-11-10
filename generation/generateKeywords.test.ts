@@ -1,5 +1,7 @@
 import { assertEquals } from "../deps.ts";
+import { loadEnvToGlobals } from "../globals/loadEnvToGlobals.ts";
 import { generateKeywords } from "./generateKeywords.ts";
+loadEnvToGlobals();
 
 Deno.test("Generate Keywords", async () => {
   try {

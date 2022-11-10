@@ -1,5 +1,7 @@
 import { assertObjectMatch } from "../deps.ts";
+import { loadEnvToGlobals } from "../globals/loadEnvToGlobals.ts";
 import { fixJson } from "./fixJson.ts";
+loadEnvToGlobals();
 
 Deno.test("Fix JSON", async () => {
   assertObjectMatch(await fixJson("{ 'hello': 'world' "), {

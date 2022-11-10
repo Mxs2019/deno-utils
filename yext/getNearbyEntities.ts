@@ -1,5 +1,4 @@
-import "https://deno.land/x/dotenv/load.ts";
-import { z } from "https://deno.land/x/zod/mod.ts";
+import { z } from "../deps.ts";
 
 // Address Schema
 const AddressSchema = z.object({
@@ -37,12 +36,11 @@ const ResponseSchema = z.object({
 export const getNearbyEntities = async (location: string) => {
   // TODO: Don't pull in closed hotels
   const res = await fetch(
-    `https://liveapi.yext.com/v2/accounts/me/entities/geosearch?api_key=${Deno.env.get(
-      "YEXT_API_KEY"
-    )}&v=20221001&location=${location}&radius=100`
+    `https://liveapi.yext.com/v2/accounts/me/entities/geosearch?api_key=${YEXT_API_KEY}&v=20221001&location=${location}&radius=100`
   );
 
   const resJson = await res.json();
+  console.log(resJson);
   const validated = ResponseSchema.parse(resJson);
 
   return validated.response;

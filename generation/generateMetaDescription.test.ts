@@ -1,4 +1,6 @@
+import { loadEnvToGlobals } from "../globals/loadEnvToGlobals.ts";
 import { generateMetaDescription } from "./generateMetaDescription.ts";
+loadEnvToGlobals();
 
 Deno.test("Generate Meta Description", async () => {
   try {

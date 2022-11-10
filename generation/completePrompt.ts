@@ -1,4 +1,4 @@
-import "https://deno.land/x/dotenv/load.ts";
+export declare const OPENAI_API_KEY: string;
 
 export type CompletePromptOptions = {
   temperature?: number;
@@ -15,7 +15,7 @@ export const completePrompt = async (
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${Deno.env.get("OPENAI_API_KEY")}`,
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
         model: "text-davinci-002",
