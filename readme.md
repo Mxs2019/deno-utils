@@ -14,7 +14,7 @@ You can set these at runtime with the `setGlobals` function that's exported.
 To use this module, you can import it like so:
 
 ```
-import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/v0.0.5/index.ts";
+import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs2019/deno-utils/v0.0.6/index.ts";
 ```
 
 ### Content Generation
@@ -46,3 +46,10 @@ import { generateMetaDescription } from "https://raw.githubusercontent.com/Mxs20
 ### Utils
 
 `slugify` takes a string and returns a slugified version
+
+### Local Dev
+
+`loadEnvToGlobals` loads the env variables to the global scope. This is a sepearte export then index so that it doesn't get bundled into the final module.
+
+You can find it at the following URL:
+`https://raw.githubusercontent.com/Mxs2019/deno-utils/vX.X.X/globals/loadEnvToGlobals.ts`
