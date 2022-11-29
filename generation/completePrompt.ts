@@ -18,7 +18,7 @@ export const completePrompt = async (
         Authorization: `Bearer ${OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "text-davinci-002",
+        model: "text-davinci-003",
         prompt,
         temperature: 0.7,
         max_tokens: 2000,
