@@ -1,4 +1,4 @@
-import jsonrepair from "https://cdn.skypack.dev/jsonrepair";
+import jsonrepair from "https://cdn.skypack.dev/jsonrepair@v2.2.0";
 import { completePrompt } from "./completePrompt.ts";
 
 export const fixJson = async (potentiallyBadJson: string) => {
